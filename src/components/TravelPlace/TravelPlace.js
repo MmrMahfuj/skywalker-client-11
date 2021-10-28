@@ -1,16 +1,17 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 
-const TravelPlace = () => {
+const TravelPlace = ({ travelPlace }) => {
+    const { title, des, img, _id } = travelPlace
     return (
         <>
             <Col md={4}>
 
-                <img src="https://i.ibb.co/WkKHDjR/babySit.png" className="tour-place-img w-100" alt="" />
+                <img src={img} className="tour-place-img w-100" alt="" />
 
                 <div>
-                    <h3>this is amuk jayga</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, recusandae.</p>
+                    <h3>{title}</h3>
+                    <p>{des}</p>
                     <button>booking now</button>
                 </div>
             </Col>

@@ -1,12 +1,19 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Carousel, Container, Row } from 'react-bootstrap';
 import banner from '../../images/banner.jpg';
 import TravelPlace from '../TravelPlace/TravelPlace';
 import './Home.css';
 
 const Home = () => {
     const [travelPlaces, setTravelPlaces] = useState([]);
+
+    useEffect(() => {
+        fetch('https://sheltered-fjord-49130.herokuapp.com/travelPlaces')
+            .then(res => res.json())
+            .then(data => setTravelPlaces(data))
+    }, [])
     return (
         <>
             <div>
@@ -51,9 +58,12 @@ const Home = () => {
             <Container className="bg-light mt-3">
                 <h2>this is service</h2>
                 <Row>
-                    {/* {
-                        travelPlaces.map(travelPlace => <TravelPlace></TravelPlace>)
-                    } */}
+                    {
+                        travelPlaces.map(travelPlace => <TravelPlace
+                            key={travelPlace._id}
+                            travelPlace={travelPlace}
+                        ></TravelPlace>)
+                    }
                 </Row>
             </Container>
         </>

@@ -15,7 +15,7 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/home">Link</Nav.Link>
+                            <Nav.Link as={Link} to="/addTravelPlace">AddTravelPlace</Nav.Link>
                         </Nav>
                         <small className="mx-3 custom-name">{user?.displayName}</small>
                         {user?.email ? <Button className="regular-custom-btn" onClick={logOut}>LogOut</Button> :
