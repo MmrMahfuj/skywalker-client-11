@@ -1,0 +1,20 @@
+.login{
+    border: 1px solid gray;
+    display: block;
+}
+.login input{
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+.login-another{
+    display: block;
+}
+.custom-auth-title{
+    color: #253750;
+    font-size: 40px;
+    font-weight: 600;
+}
+.title-variant{
+    color: #3F8810;
+}
