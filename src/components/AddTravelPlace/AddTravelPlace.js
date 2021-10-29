@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 const AddTravelPlace = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-
+        data.status = "Pending..."
         axios.post('https://sheltered-fjord-49130.herokuapp.com/travelPlaces', data)
             .then(res => {
                 if (res.data.insertedId) {

@@ -6,6 +6,8 @@ import AuthProvider from './contexts/AuthProvider';
 import Login from './components/LoginRegister/Login/Login';
 import Register from './components/LoginRegister/Register/Register';
 import AddTravelPlace from './components/AddTravelPlace/AddTravelPlace';
+import Footer from './components/Footer/Footer';
+import ManageAllTravelPlace from './components/ManageAllTravelPlace/ManageAllTravelPlace';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
             <Route path="/addTravelPlace">
               <AddTravelPlace></AddTravelPlace>
             </Route>
+            <Route path="/manageTravelPlaces">
+              <ManageAllTravelPlace></ManageAllTravelPlace>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -30,6 +35,7 @@ function App() {
               <Register></Register>
             </Route>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>

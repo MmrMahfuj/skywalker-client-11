@@ -3,19 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
+import './Header.css';
 
 const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <>
-            <Navbar bg="light" expand="lg" className="mb-3">
+            <Navbar expand="lg" className="mb-3 custom-nav">
                 <Container>
-                    <Navbar.Brand as={Link} to="/home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home">SkyWalker</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/addTravelPlace">AddTravelPlace</Nav.Link>
+                        <Nav className="mx-auto">
+                            <Nav.Link className="fw-bolder" as={Link} to="/home">Home</Nav.Link>
+                            <Nav.Link className="fw-bolder" as={Link} to="/addTravelPlace">AddTravelPlace</Nav.Link>
+                            <Nav.Link className="fw-bolder" as={Link} to="/addTravelPlace">MyBooking</Nav.Link>
                         </Nav>
                         <small className="mx-3 custom-name">{user?.displayName}</small>
                         {user?.email ? <Button className="regular-custom-btn" onClick={logOut}>LogOut</Button> :
