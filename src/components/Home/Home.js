@@ -31,12 +31,12 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 banner-img"
-                            src={banner}
+                            src="https://i.ibb.co/645VGfy/top-places-to-visit-in-the-world-montreal-canada.jpg"
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Montreal, Canada</h3>
+                            <p>As you listen to the sound of French being spoken around you and explore Old Montreal, wanderin</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -54,13 +54,13 @@ const Home = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 banner-img"
-                            src="https://i.ibb.co/0MVgv2q/top-places-to-visit-in-the-world-paris-france.jpg"
+                            src="https://i.ibb.co/hmGkD7J/top-places-to-visit-in-the-world-rome-italy.jpg"
                             alt="Third slide"
                         />
 
                         <Carousel.Caption>
-                            <h3>Paris, France</h3>
-                            <p>No visit to the French capital is complete without a trip to and a trip up its most iconic structure.</p>
+                            <h3>Rome, Italy</h3>
+                            <p>The Eternal City is more like a giant, living museum. Visitors are immersed in and surrounded</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

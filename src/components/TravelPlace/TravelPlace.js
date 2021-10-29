@@ -1,11 +1,10 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const TravelPlace = ({ travelPlace }) => {
     const { title, des, img, _id } = travelPlace;
-    const handleBook = id => {
-        console.log(id);
-    }
+
     return (
         <>
             <Col md={4}>
@@ -15,7 +14,11 @@ const TravelPlace = ({ travelPlace }) => {
                     <div className="p-3 bg-white">
                         <h4>{title}</h4>
                         <p>{des.slice(0, 95)}</p>
-                        <button onClick={() => handleBook}>book now</button>
+                        <Link style={{ textDecoration: 'none', }}
+
+                            to={`/Booking/${_id}`}>
+                            <p className="custom-service-link">Book Now</p>
+                        </Link>
                     </div>
                 </div>
             </Col>

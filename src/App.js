@@ -8,6 +8,7 @@ import Register from './components/LoginRegister/Register/Register';
 import AddTravelPlace from './components/AddTravelPlace/AddTravelPlace';
 import Footer from './components/Footer/Footer';
 import ManageAllTravelPlace from './components/ManageAllTravelPlace/ManageAllTravelPlace';
+import Booking from './components/Booking/Booking';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path="/manageTravelPlaces">
               <ManageAllTravelPlace></ManageAllTravelPlace>
+            </Route>
+            <Route path="/booking/:id">
+              <Booking></Booking>
             </Route>
             <Route path="/login">
               <Login></Login>

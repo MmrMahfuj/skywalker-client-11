@@ -93,11 +93,11 @@ const ManageAllTravelPlace = () => {
                             <tr>
                                 <td>{index}</td>
                                 <td><img src={travelPlace?.img} className="travelPlace-img w-100" alt="" /></td>
-                                <td>{travelPlace?.title}</td>
+                                <td><h6 className="fw-bolder">{travelPlace?.title}</h6></td>
                                 <td>{travelPlace?.status}<br />
                                     <Button onClick={() => handleStatus(travelPlace?._id)} variant="secondary" size="sm">accept</Button>
                                 </td>
-                                <button onClick={() => handleDeleteTravelPlace(travelPlace?._id)} className="btn bg-danger p-2">Delete</button>
+                                <button onClick={() => handleDeleteTravelPlace(travelPlace?._id)} className="btn bg-danger text-white p-2 mt-2">Delete</button>
                             </tr>
                         </tbody>
 

@@ -2,10 +2,13 @@ import React from 'react';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
 import { Container } from 'react-bootstrap';
+import useAuth from '../hooks/useAuth';
 
 const AddTravelPlace = () => {
+    const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+        data.email = user?.email
         data.status = "Pending..."
         axios.post('https://sheltered-fjord-49130.herokuapp.com/travelPlaces', data)
             .then(res => {
