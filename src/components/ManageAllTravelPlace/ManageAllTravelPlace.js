@@ -77,8 +77,58 @@ const ManageAllTravelPlace = () => {
     return (
         <Container>
             <div>
-                <h1>All Travel Place {travelPlaces?.length}</h1>
+                <h1>All Places: {travelPlaces?.length}</h1>
                 <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>img</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {travelPlaces?.map((travelPlace, index) => (
+
+                            <tr key={travelPlace._id}>
+                                <td>{index}</td>
+                                <td><img src={travelPlace?.img} className="travelPlace-img w-100" alt="" /></td>
+                                <td><h5 className="fw-bolder">{travelPlace?.title}</h5></td>
+                                <td>{travelPlace?.status}<br />
+                                    <button className=" small-btn" onClick={() => handleStatus(travelPlace?._id)}>accept</button>
+                                </td>
+                                <button onClick={() => handleDeleteTravelPlace(travelPlace?._id)} className="btn bg-danger text-white p-2 mt-2">Delete</button>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
+            </div>
+        </Container>
+    );
+};
+
+export default ManageAllTravelPlace;
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+// this old
+/*
+<Table striped bordered hover>
                     <thead>
                         <tr>
                             <th>#</th>
@@ -95,7 +145,7 @@ const ManageAllTravelPlace = () => {
                                 <td><img src={travelPlace?.img} className="travelPlace-img w-100" alt="" /></td>
                                 <td><h6 className="fw-bolder">{travelPlace?.title}</h6></td>
                                 <td>{travelPlace?.status}<br />
-                                    <Button onClick={() => handleStatus(travelPlace?._id)} variant="secondary" size="sm">accept</Button>
+                                    <button className=" small-btn" onClick={() => handleStatus(travelPlace?._id)}>accept</button>
                                 </td>
                                 <button onClick={() => handleDeleteTravelPlace(travelPlace?._id)} className="btn bg-danger text-white p-2 mt-2">Delete</button>
                             </tr>
@@ -103,9 +153,5 @@ const ManageAllTravelPlace = () => {
 
                     ))}
                 </Table>
-            </div>
-        </Container>
-    );
-};
 
-export default ManageAllTravelPlace;
+*/

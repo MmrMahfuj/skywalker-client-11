@@ -1,4 +1,13 @@
 
 .travelPlace-img{
-    height: 50px;
+    height: 100px;
+}
+.small-btn{
+    background-color: rgba(9, 129, 9, 0.815);
+    color: white;
+    border-radius: 5px;
+}
+
+.small-btn:hover{
+    background-color: green;
 }

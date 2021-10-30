@@ -35,7 +35,7 @@ const Booking = () => {
         axios.post('https://sheltered-fjord-49130.herokuapp.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('added successfully');
+                    alert('Proceed successfully');
                     reset()
 
                 }
@@ -59,7 +59,7 @@ const Booking = () => {
                     </Col>
                     <Col md={6}>
                         <div>
-                            <h2>this is add events</h2>
+                            <h2>Please fill up this form</h2>
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="p-3">
 
@@ -80,16 +80,16 @@ const Booking = () => {
                                     <textarea className="w-100" {...register("permanentAddress",)} />
                                     <br />
 
-                                    <label className="mt-3 d-flex justify-content-start mt-3">please select</label>
-                                    <select {...register("time spend")} className="w-100">
-                                        <option value="per weak">per weak $500</option>
-                                        <option value="per month">per Month $1000</option>
-                                        <option value="per 3 month">per 3 Month $1500</option>
+                                    <label className="mt-3 d-flex justify-content-start mt-3 mb-2">Please select Your Package</label>
+                                    <select {...register("package")} className="w-100">
+                                        <option value="3 Days $100">3 Days $100</option>
+                                        <option value="7 Days $150">7 Days $150</option>
+                                        <option value="15 Days $200">15 Days $200</option>
                                     </select>
 
 
                                 </div>
-                                <input type="submit" value="Add Event" />
+                                <input className="regular-btn w-75 mt-3" type="submit" value="Proceed" />
                             </form>
                         </div>
                     </Col>

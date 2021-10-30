@@ -8,8 +8,8 @@ const TravelPlace = ({ travelPlace }) => {
     return (
         <>
             <Col md={4}>
-                <div className="border">
-                    <img src={img} className="tour-place-img w-100" alt="" />
+                <div className="">
+                    <img src={img} className="rounded-circle img-fluid img-custom-circle" alt="" />
 
                     <div className="p-3 bg-white">
                         <h4>{title}</h4>
@@ -17,7 +17,7 @@ const TravelPlace = ({ travelPlace }) => {
                         <Link style={{ textDecoration: 'none', }}
 
                             to={`/Booking/${_id}`}>
-                            <p className="custom-service-link">Book Now</p>
+                            <button className="regular-btn w-75">Book Now</button>
                         </Link>
                     </div>
                 </div>
@@ -27,3 +27,5 @@ const TravelPlace = ({ travelPlace }) => {
 };
 
 export default TravelPlace;
+
+// tour-place-img w-100

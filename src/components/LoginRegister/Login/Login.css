@@ -1,3 +1,7 @@
+
+.bg-color{
+    background-color: #FAF1ED;
+}
 .login{
     border: 1px solid gray;
     display: block;
@@ -17,4 +21,12 @@
 }
 .title-variant{
     color: #3F8810;
+}
+.regular-custom-btn{
+    background-color: #6b6561;
+}
+.google-img{
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
 }

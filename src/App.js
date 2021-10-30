@@ -9,28 +9,49 @@ import AddTravelPlace from './components/AddTravelPlace/AddTravelPlace';
 import Footer from './components/Footer/Footer';
 import ManageAllTravelPlace from './components/ManageAllTravelPlace/ManageAllTravelPlace';
 import Booking from './components/Booking/Booking';
+import MyBooking from './components/MyBooking/MyBooking';
+import Proceed from './components/Proceed/Proceed';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
-          <Header></Header>
+
           <Switch>
             <Route exact path="/">
+              <Header></Header>
               <Home></Home>
+              <Footer></Footer>
             </Route>
             <Route path="/home">
+              <Header></Header>
               <Home></Home>
+              <Footer></Footer>
             </Route>
             <Route path="/addTravelPlace">
+              <Header></Header>
               <AddTravelPlace></AddTravelPlace>
+              <Footer></Footer>
             </Route>
             <Route path="/manageTravelPlaces">
+              <Header></Header>
               <ManageAllTravelPlace></ManageAllTravelPlace>
+              <Footer></Footer>
             </Route>
             <Route path="/booking/:id">
+              <Header></Header>
               <Booking></Booking>
+              <Footer></Footer>
+            </Route>
+            <Route path="/myBooking">
+              <Header></Header>
+              <MyBooking></MyBooking>
+              <Footer></Footer>
+            </Route>
+            <Route path="/proceed">
+              <Header></Header>
+              <Proceed></Proceed>
             </Route>
             <Route path="/login">
               <Login></Login>
@@ -39,7 +60,7 @@ function App() {
               <Register></Register>
             </Route>
           </Switch>
-          <Footer></Footer>
+
         </BrowserRouter>
       </AuthProvider>
     </div>

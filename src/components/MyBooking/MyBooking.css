@@ -1,0 +1,23 @@
+
+.add-place-hight{
+    min-height: 500px;
+}
+.booking-cart{
+    border-radius: 15px;
+    background-color: white;
+    min-height: 150px;
+}
+.booking-img{
+    height: 180px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.booking-title{
+    background-color: white;
+    padding: 10px;
+}
+.cancel-btn{
+    background-color: rgb(226, 223, 223);
+    border: none;
+    padding: 8px 20px;
+}

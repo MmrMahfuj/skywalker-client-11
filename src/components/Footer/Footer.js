@@ -1,25 +1,31 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import "./Footer.css";
-import logo2 from '../../images/logo2.png';
+import logo2 from '../../images/logo.png';
 
 const Footer = () => {
     return (
         <div className="custom-footer mt-5">
             <Container className="py-3">
                 <Row>
-                    <Col>
-                        <img src={logo2} className="footer-logo" alt="" />
+                    <Col md={4}>
+                        <img src={logo2} className="footer-logo mt-2" alt="" />
+                        <h2>Ocean View</h2>
                     </Col>
-                    <Col>
-                        <h4>HELP</h4>
-                        <div className="mt-3">
-                            <span>Help Center</span><br />
-                            <span>Authors</span>
+                    <Col md={4}>
+                        <h4 className="mt-2">TOP DESTINATIONS</h4>
+                        <div className="mt-3 text-center">
+                            <span className="fw-bolder">Hong Kong</span><br />
+                            <span className="fw-bolder">Indonesia</span><br />
+                            <span className="fw-bolder">Singapore</span><br />
+                            <span className="fw-bolder">Turkey</span><br />
+                            <span className="fw-bolder">Canada</span><br />
+                            <span className="fw-bolder">England</span><br />
+
                         </div>
                     </Col>
-                    <Col>
-                        <h4>CONTACT US</h4>
+                    <Col md={4}>
+                        <h4 className="mt-2">CONTACT US</h4>
                         <div className="mt-3">
                             <span className="me-3 custom-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -52,7 +58,7 @@ const Footer = () => {
                 </Row>
                 <hr />
                 <footer>
-                    <p className="copyright-color">&copy; Skywalker 2021 Made With &hearts; by Mahfuj</p>
+                    <p className="copyright-color">&copy; Ocean View 2021 Made With &hearts; by Mahfuj</p>
                 </footer>
             </Container>
         </div>

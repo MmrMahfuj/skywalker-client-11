@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import useAuth from '../hooks/useAuth';
+import img1 from '../../images/add-place-img.png'
 
 const AddTravelPlace = () => {
     const { user } = useAuth();
@@ -22,26 +23,34 @@ const AddTravelPlace = () => {
     return (
         <div>
             <Container>
-                <div className="mx-auto bg-white mt-5 rounded">
-                    <h2>this is add events</h2>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="p-3">
+                <Row>
+                    <Col md={6}>
+                        <div className="mx-auto bg-white mt-5 p-3 rounded">
+                            <h2>Add Place</h2>
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <div className="p-3">
 
-                            <label className="d-flex justify-content-start">Event Title</label>
-                            <input className="w-100" {...register("title", require)} /><br />
-                            <label className="mt-3 d-flex justify-content-start">Description</label>
-                            <textarea className="w-100" {...register("des",)} />
-                            <br />
-                            <label className="mt-3 d-flex justify-content-start">image URL</label>
-                            <input className="w-100" {...register("img", require)} /><br />
+                                    <label className="d-flex justify-content-start">Name of the place</label>
+                                    <input className="w-100" {...register("title", require)} /><br />
+                                    <label className="mt-3 d-flex justify-content-start">Description</label>
+                                    <textarea className="w-100" {...register("des",)} />
+                                    <br />
+                                    <label className="mt-3 d-flex justify-content-start">image URL</label>
+                                    <input className="w-100" {...register("img", require)} /><br />
 
 
+                                </div>
+                                <input type="submit" className="regular-btn" value="ADD PLACE" />
+                            </form>
                         </div>
-                        <input type="submit" value="Add Event" />
-                    </form>
-                </div>
+                    </Col>
+                    <Col md={6}>
+                        <div className="d-flex align-items-center justify-content-center">
+                            <img src={img1} className="img-fluid " alt="" />
+                        </div>
+                    </Col>
+                </Row>
             </Container>
-
         </div>
     );
 };

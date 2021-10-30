@@ -1,7 +1,22 @@
 
+body{
+    background-color: #F8F9FA;
+}
 .banner-img{
-    height: 600px;
+    height: 460px;
 }
 .tour-place-img{
     height: 200px;
+}
+.custom-hotel-cart{
+    min-height: 400px;
+    border-radius: 15px;
+}
+.custom-hotel-title{
+    height: 100px;
+}
+.custom-hotel-img{
+    height: 230px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
