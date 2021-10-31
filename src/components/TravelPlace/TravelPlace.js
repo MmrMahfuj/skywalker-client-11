@@ -13,7 +13,7 @@ const TravelPlace = ({ travelPlace }) => {
 
                     <div className="p-3 bg-white">
                         <h4>{title}</h4>
-                        <p>{des.slice(0, 95)}</p>
+                        <p>{des?.slice(0, 95)}</p>
                         <Link style={{ textDecoration: 'none', }}
 
                             to={`/Booking/${_id}`}>

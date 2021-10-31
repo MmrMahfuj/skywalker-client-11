@@ -21,3 +21,21 @@
 .regular-btn:hover{
     background-color: green;
 }
+
+
+
+/* this is link style */
+.nav-link{
+    font-weight: 600;
+    font-size: 20px;
+    color: black !important;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.nav-link:hover{
+    background-color: rgb(170, 150, 147);
+}
+.nav-link:focus{
+    color: rgb(134, 134, 113) !important;
+}

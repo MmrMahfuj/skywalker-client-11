@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row, Spinner } from 'react-bootstrap';
+import { Container, Spinner, Table } from 'react-bootstrap';
 import useAuth from '../hooks/useAuth';
 import './MyBooking.css';
 
@@ -26,7 +26,7 @@ const MyBooking = () => {
     const handleCancel = id => {
         const proceed = window.confirm('Are you sure, you want to delete');
         if (proceed) {
-            fetch(`https://sheltered-fjord-49130.herokuapp.com/travelPlaces/${id}`, {
+            fetch(`https://sheltered-fjord-49130.herokuapp.com/deleteBookings/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -46,37 +46,51 @@ const MyBooking = () => {
         return <Spinner animation="border" variant="success" />
     }
 
+
     return (
         <div className="py-5 add-place-hight">
 
-            <Container className="my-5">
-                <Row>
-                    {
-                        myBookings.map(myBooking => <Col md={4}>
-                            <div className="border booking-cart">
-                                <Row>
-                                    <Col>
-                                        <img src={myBooking.img} className="booking-img w-100" alt="" />
-                                    </Col>
-                                    <Col>
-                                        <div className=" booking-title">
-                                            <h4>{myBooking.title.slice(0, 15)}</h4>
-                                            <p>{myBooking.des.slice(0, 30)}</p>
-                                            <button className="cancel-btn" onClick={() => handleCancel(myBooking._id)}>Cancel</button>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </Col>)
-                    }
+            <Container>
+                <div className="bookings-page-height">
+                    <h1>Your Bookings: {myBookings?.length}</h1>
+                    <Table striped bordered hover responsive>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Place image</th>
+                                <th>Place Name</th>
+                                <th>Your Name and Email</th>
+                                <th>Your Current Location</th>
+                                <th>Selected Your package</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {myBookings?.map((booking, index) => (
 
-                </Row>
+                                <tr key={booking._id}>
+                                    <td>{index}</td>
+                                    <td><img src={booking?.PlaceImg} className="travelPlace-img w-100" alt="" /></td>
+                                    <td><h6 className="fw-bolder">{booking?.PlaceName}</h6></td>
+                                    <td>Name: {booking?.name} <br /> <br />Email: {booking?.email}</td>
+                                    <td><p>{booking?.currentLocation}</p></td>
+                                    <td>{booking?.package}</td>
+                                    <td>{booking?.status}
+                                    </td>
+
+                                    <button className="cancel-btn" onClick={() => handleCancel(booking?._id)}>Cancel</button>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
+                </div>
             </Container>
 
             {
                 myBookings.length === 0 && <Container className="mb-5">
                     <div className="">
-                        <h2>You are no place added.</h2>
+                        <h2>You are no Booking place added.</h2>
                         <h5>Please added place and see here</h5>
                     </div>
                 </Container>
@@ -89,3 +103,9 @@ const MyBooking = () => {
 };
 
 export default MyBooking;
+
+
+// 
+// https://sheltered-fjord-49130.herokuapp.com
+
+// 

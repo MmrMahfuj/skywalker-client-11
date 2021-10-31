@@ -12,7 +12,7 @@ const Booking = () => {
 
 
     const [travelPlaces, setTravelPlaces] = useState([]);
-    const { isLoading, setIsLoading } = useAuth();
+    const { user, isLoading, setIsLoading } = useAuth();
     const { register, handleSubmit, reset } = useForm();
 
 
@@ -31,6 +31,10 @@ const Booking = () => {
     }
 
     const onSubmit = data => {
+        data.PlaceId = travelPlaces._id
+        data.PlaceName = travelPlaces.title
+        data.PlaceImg = travelPlaces.img
+        data.email = user?.email
         data.status = "Pending..."
         axios.post('https://sheltered-fjord-49130.herokuapp.com/bookings', data)
             .then(res => {
@@ -67,7 +71,7 @@ const Booking = () => {
                                     <input className="w-100" {...register("name", require)} /><br />
 
                                     <label className="d-flex justify-content-start mt-3">Email</label>
-                                    <input type="email" className="w-100" {...register("email", require)} /><br />
+                                    <input type="email" className="w-100" {...register("formEmail", require)} /><br />
 
                                     <label className="d-flex justify-content-start mt-3">Phone Number</label>
                                     <input className="w-100" {...register("Phone", require)} /><br />
