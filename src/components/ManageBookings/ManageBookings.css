@@ -9,6 +9,7 @@
     background-color: rgba(9, 129, 9, 0.815) !important;
     color: white !important;
     border-radius: 5px !important;
+    margin-top: 4px;
 }
 
 .small-btn:hover{

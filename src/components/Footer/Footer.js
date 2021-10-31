@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import "./Footer.css";
-import logo2 from '../../images/logo.png';
+import logo2 from '../../images/logo2.png';
 
 const Footer = () => {
     return (
@@ -10,7 +10,7 @@ const Footer = () => {
                 <Row>
                     <Col md={4}>
                         <img src={logo2} className="footer-logo mt-2" alt="" />
-                        <h2>Ocean View</h2>
+
                     </Col>
                     <Col md={4}>
                         <h4 className="mt-2">TOP DESTINATIONS</h4>
@@ -58,7 +58,7 @@ const Footer = () => {
                 </Row>
                 <hr />
                 <footer>
-                    <p className="copyright-color">&copy; Ocean View 2021 Made With &hearts; by Mahfuj</p>
+                    <p className="copyright-color">&copy; Skywalker 2021 Made With &hearts; by Mahfuj</p>
                 </footer>
             </Container>
         </div>

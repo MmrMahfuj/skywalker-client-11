@@ -4,7 +4,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import './Header.css';
-import logo from '../../images/logo.png';
+import logo from '../../images/logo1.png';
 
 const Header = () => {
     const { user, logOut } = useAuth();
@@ -12,7 +12,7 @@ const Header = () => {
         <>
             <Navbar expand="lg" className=" custom-nav">
                 <Container>
-                    <Navbar.Brand className="fs-3 fw-bolder" as={Link} to="/home"><img src={logo} className="header-img" alt="" />Ocean View</Navbar.Brand>
+                    <Navbar.Brand className="fs-2 header-title" as={Link} to="/home"><img src={logo} className="header-img" alt="" />Skywalker</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto">

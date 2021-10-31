@@ -22,6 +22,7 @@ const Home = () => {
                 setIsLoading(false)
             })
     }, [])
+
     if (isLoading) {
         return <Spinner animation="border" variant="success" />
     }

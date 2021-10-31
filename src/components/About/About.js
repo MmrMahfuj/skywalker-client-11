@@ -80,19 +80,19 @@ const About = () => {
                                     <tbody>
                                         <tr className="text-start">
 
-                                            <td>Email</td>
+                                            <td className="fw-bold">Email</td>
                                             <td>:</td>
                                             <td>mahfuj.mmr3@gmail.com</td>
                                         </tr>
                                         <tr className="text-start">
 
-                                            <td>Mobile Number</td>
+                                            <td className="fw-bold">Mobile Number</td>
                                             <td>:</td>
                                             <td>+8801886300084</td>
                                         </tr>
                                         <tr className="text-start">
 
-                                            <td>Phone</td>
+                                            <td className="fw-bold">Phone</td>
                                             <td>:</td>
                                             <td>+012356412</td>
                                         </tr>

@@ -89,7 +89,7 @@ const MyBooking = () => {
 
             {
                 myBookings.length === 0 && <Container className="mb-5">
-                    <div className="">
+                    <div>
                         <h2>You are no Booking place added.</h2>
                         <h5>Please added place and see here</h5>
                     </div>

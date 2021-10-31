@@ -17,18 +17,18 @@ const Booking = () => {
 
 
     useEffect(() => {
-        setIsLoading(true)
+        // setIsLoading(true)
         fetch(`https://sheltered-fjord-49130.herokuapp.com/travelPlaces/${id}`)
             .then(res => res.json())
             .then(data => {
                 setTravelPlaces(data)
-                setIsLoading(false)
+                // setIsLoading(false)
             })
     }, [])
 
-    if (isLoading) {
-        return <Spinner animation="border" variant="success" />
-    }
+    // if (isLoading) {
+    //     return <Spinner animation="border" variant="success" />
+    // }
 
     const onSubmit = data => {
         data.PlaceId = travelPlaces._id

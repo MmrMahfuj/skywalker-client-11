@@ -13,6 +13,7 @@ import MyBooking from './components/MyBooking/MyBooking';
 import Proceed from './components/Proceed/Proceed';
 import ManageBookings from './components/ManageBookings/ManageBookings';
 import About from './components/About/About';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -41,11 +42,11 @@ function App() {
               <ManageBookings></ManageBookings>
               <Footer></Footer>
             </Route>
-            <Route path="/booking/:id">
+            <PrivateRoute path="/booking/:id">
               <Header></Header>
               <Booking></Booking>
               <Footer></Footer>
-            </Route>
+            </PrivateRoute>
             <Route path="/myBooking">
               <Header></Header>
               <MyBooking></MyBooking>
