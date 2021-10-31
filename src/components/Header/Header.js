@@ -30,7 +30,7 @@ const Header = () => {
                             }
 
                             {
-                                user.email && <NavLink className="nav-link" to="/manageTravelPlaces">Manage All Bookings</NavLink>
+                                user.email && <NavLink className="nav-link" to="/manageBookings">Manage Bookings</NavLink>
                             }
 
 

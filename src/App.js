@@ -11,6 +11,8 @@ import ManageAllTravelPlace from './components/ManageAllTravelPlace/ManageAllTra
 import Booking from './components/Booking/Booking';
 import MyBooking from './components/MyBooking/MyBooking';
 import Proceed from './components/Proceed/Proceed';
+import ManageBookings from './components/ManageBookings/ManageBookings';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -34,9 +36,9 @@ function App() {
               <AddTravelPlace></AddTravelPlace>
               <Footer></Footer>
             </Route>
-            <Route path="/manageTravelPlaces">
+            <Route path="/manageBookings">
               <Header></Header>
-              <ManageAllTravelPlace></ManageAllTravelPlace>
+              <ManageBookings></ManageBookings>
               <Footer></Footer>
             </Route>
             <Route path="/booking/:id">
@@ -52,6 +54,11 @@ function App() {
             <Route path="/proceed">
               <Header></Header>
               <Proceed></Proceed>
+            </Route>
+            <Route path="/about">
+              <Header></Header>
+              <About></About>
+              <Footer></Footer>
             </Route>
             <Route path="/login">
               <Login></Login>

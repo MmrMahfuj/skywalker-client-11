@@ -1,0 +1,16 @@
+
+.bookings-page-height{
+    min-height: 600px;
+}
+.travelPlace-img{
+    height: 80px;
+}
+.small-btn{
+    background-color: rgba(9, 129, 9, 0.815) !important;
+    color: white !important;
+    border-radius: 5px !important;
+}
+
+.small-btn:hover{
+    background-color: green;
+}
