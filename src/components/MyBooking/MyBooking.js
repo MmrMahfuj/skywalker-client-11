@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Spinner, Table } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import useAuth from '../hooks/useAuth';
 import './MyBooking.css';
 
@@ -13,13 +13,13 @@ const MyBooking = () => {
 
 
     useEffect(() => {
-        setIsLoading(true)
+        // setIsLoading(true)
         const url = `https://sheltered-fjord-49130.herokuapp.com/emailTravelPlaces/${user.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
                 setMyBookings(data)
-                setIsLoading(false)
+                // setIsLoading(false)
             })
     }, [user.email, control])
 
@@ -42,9 +42,9 @@ const MyBooking = () => {
         }
     }
 
-    if (isLoading) {
-        return <Spinner animation="border" variant="success" />
-    }
+    // if (isLoading) {
+    //     return <Spinner animation="border" variant="success" />
+    // }
 
 
     return (
@@ -57,11 +57,11 @@ const MyBooking = () => {
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Place image</th>
-                                <th>Place Name</th>
-                                <th>Your Name and Email</th>
-                                <th>Your Current Location</th>
-                                <th>Selected Your package</th>
+                                <th>Image</th>
+                                <th>Location</th>
+                                <th>Name and Email</th>
+                                <th>From</th>
+                                <th>Selected Package</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>

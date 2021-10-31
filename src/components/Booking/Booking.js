@@ -48,12 +48,12 @@ const Booking = () => {
 
 
     return (
-        <div>
+        <div className="mt-5">
             <Container>
                 <Row>
                     <Col md={6}>
-                        <div className="border">
-                            <img src={travelPlaces?.img} className="tour-place-img w-100" alt="" />
+                        <div className="booking-box">
+                            <img src={travelPlaces?.img} className="booking-place-img w-100" alt="" />
 
                             <div className="p-3 bg-white">
                                 <h4>{travelPlaces?.title}</h4>
@@ -68,24 +68,24 @@ const Booking = () => {
                                 <div className="p-3">
 
                                     <label className="d-flex justify-content-start">Full Name</label>
-                                    <input className="w-100" {...register("name", require)} /><br />
+                                    <input className="w-100 input-field" {...register("name", require)} /><br />
 
                                     <label className="d-flex justify-content-start mt-3">Email</label>
-                                    <input type="email" className="w-100" {...register("formEmail", require)} /><br />
+                                    <input type="email" className="w-100 input-field" {...register("formEmail", require)} /><br />
 
                                     <label className="d-flex justify-content-start mt-3">Phone Number</label>
-                                    <input className="w-100" {...register("Phone", require)} /><br />
+                                    <input className="w-100 input-field" {...register("Phone", require)} /><br />
 
                                     <label className="mt-3 d-flex justify-content-start">Your Current Location</label>
-                                    <textarea className="w-100" {...register("currentLocation",)} />
+                                    <textarea className="w-100 input-field" {...register("currentLocation",)} />
                                     <br />
 
                                     <label className="mt-3 d-flex justify-content-start mt-3">Your Permanent Address</label>
-                                    <textarea className="w-100" {...register("permanentAddress",)} />
+                                    <textarea className="w-100 input-field" {...register("permanentAddress",)} />
                                     <br />
 
                                     <label className="mt-3 d-flex justify-content-start mt-3 mb-2">Please select Your Package</label>
-                                    <select {...register("package")} className="w-100">
+                                    <select {...register("package")} className="w-100 input-field">
                                         <option value="3 Days $100">3 Days $100</option>
                                         <option value="7 Days $150">7 Days $150</option>
                                         <option value="15 Days $200">15 Days $200</option>

@@ -4,6 +4,7 @@ body{
 }
 .banner-img{
     height: 460px;
+    border-radius: 15px;
 }
 .tour-place-img{
     height: 200px;

@@ -1,4 +1,22 @@
 
+/* .booking-height{
+    min-height: 800px;
+} */
+
+.booking-box{
+    border-radius: 15px;
+    background-color: white;
+}
 .custom-para{
     text-align: justify;
+}
+.booking-place-img{
+    height: 300px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.input-field{
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid gray;
 }

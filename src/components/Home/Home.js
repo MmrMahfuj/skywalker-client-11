@@ -71,7 +71,8 @@ const Home = () => {
                 </Container>
             </div>
             <Container className=" mt-5">
-                <h2 className="my-5 fw-bold">Dream Destinations</h2>
+                <h2 className="my-5 fw-bold text-start">Dream Destinations</h2>
+
                 <Row className="g-4">
                     {
                         travelPlaces.map(travelPlace => <TravelPlace

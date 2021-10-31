@@ -10,7 +10,7 @@ const Footer = () => {
                 <Row>
                     <Col md={4}>
                         <img src={logo2} className="footer-logo mt-2" alt="" />
-
+                        <p className="mt-2 fw-bolder">Life is a daring adventure or nothing at all.</p>
                     </Col>
                     <Col md={4}>
                         <h4 className="mt-2">TOP DESTINATIONS</h4>

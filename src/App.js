@@ -7,13 +7,13 @@ import Login from './components/LoginRegister/Login/Login';
 import Register from './components/LoginRegister/Register/Register';
 import AddTravelPlace from './components/AddTravelPlace/AddTravelPlace';
 import Footer from './components/Footer/Footer';
-import ManageAllTravelPlace from './components/ManageAllTravelPlace/ManageAllTravelPlace';
 import Booking from './components/Booking/Booking';
 import MyBooking from './components/MyBooking/MyBooking';
 import Proceed from './components/Proceed/Proceed';
 import ManageBookings from './components/ManageBookings/ManageBookings';
 import About from './components/About/About';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -32,26 +32,26 @@ function App() {
               <Home></Home>
               <Footer></Footer>
             </Route>
-            <Route path="/addTravelPlace">
+            <PrivateRoute path="/addTravelPlace">
               <Header></Header>
               <AddTravelPlace></AddTravelPlace>
               <Footer></Footer>
-            </Route>
-            <Route path="/manageBookings">
+            </PrivateRoute>
+            <PrivateRoute path="/manageBookings">
               <Header></Header>
               <ManageBookings></ManageBookings>
               <Footer></Footer>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/booking/:id">
               <Header></Header>
               <Booking></Booking>
               <Footer></Footer>
             </PrivateRoute>
-            <Route path="/myBooking">
+            <PrivateRoute path="/myBooking">
               <Header></Header>
               <MyBooking></MyBooking>
               <Footer></Footer>
-            </Route>
+            </PrivateRoute>
             <Route path="/proceed">
               <Header></Header>
               <Proceed></Proceed>
@@ -66,6 +66,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
 

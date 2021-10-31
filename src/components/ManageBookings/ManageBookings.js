@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Spinner, Table } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import useAuth from '../hooks/useAuth';
 import './ManageBookings.css';
 
 const ManageBookings = () => {
-    const { isLoading, setIsLoading } = useAuth();
+    // const { isLoading, setIsLoading } = useAuth();
 
     const [bookings, setBookings] = useState([]);
     const [control, setControl] = useState(false);
 
 
     useEffect(() => {
-        setIsLoading(true)
+        // setIsLoading(true)
         fetch('https://sheltered-fjord-49130.herokuapp.com/bookings')
             .then(res => res.json())
             .then(data => {
                 setBookings(data)
-                setIsLoading(false)
+                // setIsLoading(false)
             })
     }, [control])
 
-    if (isLoading) {
-        return <Spinner animation="border" variant="success" />
-    }
+    // if (isLoading) {
+    //     return <Spinner animation="border" variant="success" />
+    // }
 
 
 
@@ -40,7 +40,7 @@ const ManageBookings = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    alert('Updated Successfully.')
+                    alert('Successfully Approved!')
                     setControl(!control);
                 }
                 else {
@@ -76,16 +76,16 @@ const ManageBookings = () => {
     return (
         <Container>
             <div className="bookings-page-height">
-                <h1>All Bookings: {bookings?.length}</h1>
+                <h2 className="my-3">Pending Orders: {bookings?.length}</h2>
                 <Table striped bordered hover responsive>
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Place image</th>
-                            <th>Place Name</th>
-                            <th>Customer Name and Email</th>
-                            <th>Customer Current Location</th>
-                            <th>Selected package</th>
+                            <th>Image</th>
+                            <th>Location</th>
+                            <th>Name and Email</th>
+                            <th>Address</th>
+                            <th>Selected Package</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>

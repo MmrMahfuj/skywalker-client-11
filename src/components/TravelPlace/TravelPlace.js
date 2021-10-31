@@ -13,11 +13,11 @@ const TravelPlace = ({ travelPlace }) => {
 
                     <div className="p-3 bg-white">
                         <h4>{title}</h4>
-                        <p>{des?.slice(0, 95)}</p>
+                        <p className="">{des?.slice(0, 95)}</p>
                         <Link style={{ textDecoration: 'none', }}
 
                             to={`/Booking/${_id}`}>
-                            <button className="regular-btn w-75">Book Now</button>
+                            <button className="regular-btn w-75">Check In</button>
                         </Link>
                     </div>
                 </div>
